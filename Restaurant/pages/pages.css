@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Festive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+section{
+  padding: 100px 0;
+}
+.max-width{
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+/* navbar styling */
+.navbar{
+  position: fixed;
+  background-color: black;
+  width: 100%;
+  z-index: 999;
+  padding: 30px 0;
+  font-family: 'Ubuntu', sans-serif;
+  transition: all 0.3s ease;
+}
+.navbar.sticky{
+  padding: 15px 0;
+  background: rgb(255, 106, 6);
+}
+.navbar .max-width{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+  font-family: 'Rowdies';
+}
+.navbar .logo a span{
+  color: rgb(255, 106, 6);
+  transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+  color: #fff;
+}
+.navbar .menu li{
+  list-style: none;
+  display: inline-block;
+}
+.navbar .menu li a{
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+  color: rgb(255, 106, 6);
+}
+.navbar.sticky .menu li a:hover{
+  color: #fff;
+}
+/* menu btn styling */
+.menu-btn{
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+/* menu section styling */
+.menu-grid{
+  padding: 0 10px 30px 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+  grid-gap: 20px 40px;
+}
+.heading{
+  background-color: rgb(0, 0, 0);
+  color: white;
+  margin-top: 120px;
+  padding: 30px 0;
+  grid-column: 1/-1;
+  text-align: center;
+}
+.heading h1{
+  font-weight: 400;
+  color: white;
+  font-size: 30px;
+  letter-spacing: 10px;
+  margin-bottom: 10px;
+}
+.food-items{
+  display: grid;
+  position: relative;
+  grid-template-rows: auto 1fr;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgb(94, 94, 94);
+}
+.food-items img{
+  position: relative;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+h1{
+  grid-column: 1/-1;
+  text-align: center;
+}
+.details{
+  padding: 20px 10px;
+  display: grid;
+  grid-template-rows: auto 1fr 50px;
+  grid-row-gap: 15px;
+}
+.details-sub{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.details-sub h5{
+  font-size: 30px;
+  font-family: 'Amatic SC';
+  color: rgb(255, 106, 6);
+}
+.price{
+  text-align: right;
+}
+.details p{
+  color: rgb(41, 41, 41);
+  font-size: 15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  line-height: 28px;
+  font-weight: 400;
+  align-self: stretch;
+}
+.heading-bottom{
+  background-color: none;
+  color: rgb(0, 0, 0);
+  padding: 20px 0;
+  grid-column: 1/-1;
+  text-align: center;
+}
+.heading-bottom h1{
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  letter-spacing: 10px;
+  margin-bottom: 10px;
+}
+/* .details button{
+  background-color: black;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  width: 180px;
+  height: 40px
+} */
+/* contact section styling */
+.contact-form{
+  min-height: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: rgb(255, 255, 255);
+}
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.container h1{
+  color:rgb(255, 106, 6);
+  font-size: 36px;
+  font-family: 'Rowdies';
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 16px;
+  margin-top: 30px;
+}
+.container p{
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-family: 'Open Sans';
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+form{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  background-color: rgb(5, 5, 5);
+  color: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0px 6px 12px rgb(122, 122, 122);
+}
+.form-group label{
+  display: block;
+  margin-bottom: 5px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-family: 'Oswald';
+}
+.form-element{
+  appearance: none;
+  outline: none;
+  border: none;
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  padding: 12px 16px;
+  background-color: #fff;
+}
+textarea{
+  resize: none;
+  min-height: 100px;
+}
+.submit-group{
+  grid-column: 1/-1;
+  text-align: right;
+}
+.submit-group input[type="submit"]{
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+
+  padding: 12px 16px;
+  background-color: rgb(255, 106, 6);;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s;
+}
+/* our story */
+.story{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+.left-image{
+  background: url(/Restaurant/src/images/chef-about.jpg) no-repeat;
+  background-size: 55%;
+  overflow: hidden;
+  padding: 100px 0;
+}
+.inner-section{
+  width: 55%;
+  float: right;
+  background-color: #111;
+  padding: 140px;
+  box-shadow: 12px 12px 8px gray;
+}
+.inner-section h1{
+  margin-bottom: 30px;
+  font-size: 40px;
+  font-family: 'Oswald';
+  font-weight: 900;
+  color:rgb(255, 106, 6)
+}
+.text{
+  font-size: 20px;
+  font-family: 'Open Sans';
+  color: whitesmoke;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+/* end our story section */
+/* footer section */
+.footer{
+  background-color: rgb(39, 39, 39);
+  line-height: 1.5;
+  padding: 70px 0;
+}
+.container-foot{
+  max-width: 1170px;
+  margin: auto;
+}
+ul{
+  list-style: none;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer-col{
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col .footer-logo{
+  font-family: 'Rowdies';
+  font-size: 18px;
+  color: white;
+  margin-bottom: 30px;
+  position: relative;
+}
+.footer-col .footer-logo span{
+  color: rgb(255, 106, 6);
+}
+.footer-col li{
+  color: whitesmoke;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.footer-col li a{
+  color: whitesmoke;
+}
+.footer-col h4{
+  font-size: 18px;
+  font-family: 'Oswald';
+  color: whitesmoke;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: rgb(255, 106, 6);
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+/* responsive media*/
+@media (max-width: 1104px) {
+  .menu-grid .heading .food-items{
+      height: 350px;
+      width: 350px;
+  }
+}
+@media (max-width: 991px) {
+  .max-width{
+      padding: 0 50px;
+  }
+}
+@media (max-width: 947px){
+  .menu-btn{
+      display: block;
+      z-index: 999;
+  }
+  .menu-btn i.active:before{
+      content: "\f00d";
+  }
+  .navbar .menu{
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      left: -100%;
+      top: 0;
+      background: #111;
+      text-align: center;
+      padding-top: 80px;
+      transition: all 0.3s ease;
+  }
+  .navbar .menu.active{
+      left: 0;
+  }
+  .navbar .menu li{
+      display: block;
+  }
+  .navbar .menu li a{
+      display: inline-block;
+      margin: 20px 0;
+      font-size: 25px;
+  }
+  .home .home-content .logo{
+      font-size: 70px;
+  }
+  .home .home-content .quote{
+      font-size: 35px;
+  }
+  .home .home-content a{
+      font-size: 23px;
+      padding: 10px 30px;
+  }
+  .max-width{
+      max-width: 930px;
+  }
+  .menu-grid .heading .food-items{
+      width: 100%;
+  }
+}
+
